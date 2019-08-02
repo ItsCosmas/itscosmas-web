@@ -1,0 +1,228 @@
+// ----------------- mixins --------------------------- //
+@import './mixins.scss';
+// --------------------- variables -------------------------------//
+// css variables and sass variables 
+
+:root{
+  // colors
+  --color-primary: #002458;
+  --color-secondary: #007bff;
+  --color-tertiary:rgba(0,123,255,.08);
+  --color-white:#fff;
+  --color-white-dark:#f0f0f0;
+  --color-black:#000;
+
+  // font
+  --default-font-size: 1.4rem;
+
+  // grid
+  --grid-width: 114rem;
+  --gutter-vertical: 8rem;
+  --gutter-vertical-small: 2rem;
+  --gutter-horizontal:4rem;
+
+  // z-indexes
+  --z-index-k:1000;
+}
+// --------------------- animations -------------------------- //
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// --------------- utilities ---------------------------------------- //
+
+.u-center-text { text-align: center !important; }
+.u-margin-bottom-big { 
+    margin-bottom: 8rem !important;
+}
+.u-margin-bottom-medium {
+    margin-bottom: 4rem !important;
+}
+.u-margin-bottom-small { margin-bottom: 1.5rem !important;}
+
+.u-margin-top-big { margin-top: 8rem !important;}
+.u-margin-top-huge { margin-top: 10rem !important;}
+
+
+// ------------------------ base -------------------------------------- //
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; // 1rem = 10px
+
+  
+  @include respond(four-k) {
+    font-size: 75%; // 1rem = 12px
+  }
+
+  @include respond(laptop-large){
+      font-size: 62.5%;
+  }
+
+  @include respond(tablet) {
+      // width < 1200
+      font-size: 56.25%; // 1rem = 9px
+  }
+
+  @include respond(mobile-large) {
+      // width < 900
+      font-size: 50%; // 1rem = 8px
+  }
+}
+body {
+  padding: 2rem 5rem;
+  font-size: var(--default-font-size);
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include respond(mobile-large){
+    padding: 2rem 2rem;
+  }
+  @include respond(mobile-small){
+    padding: 2rem 1rem;
+  }
+}
+
+main {
+  padding: 4rem 2rem;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+// ---------------------- typography ---------------------------------- //
+.section-title {
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--color-primary);
+  border-bottom: 0.1rem solid var(--color-white-dark);
+}
+.content-title {
+  font-weight: 400;
+  font-size: 3rem;
+  color: var(--color-primary);
+}
+
+//----------------- layout -------------------------------------- //
+
+// grid
+.row {
+  max-width: var(--grid-width);
+  margin: 0 auto;
+
+  &:not(:last-child){
+      margin-bottom: var(--gutter-vertical-small);
+  }
+
+  @include clearfix;
+
+  // Any class attribute that starts with "col-"
+  // * for contains
+  // $ for ends with
+  [class^="col-"]{
+      float: left;
+
+      &:not(:last-child){
+          margin-right: var(--gutter-horizontal);
+
+
+          @include respond(tablet){
+            margin-right: 0;
+            margin-bottom: var(--gutter-vertical-small);
+        }
+
+      }
+
+      @include respond(tablet){
+        width: 100% !important;
+      }
+
+  }
+
+  .col-1-of-2 {
+      width: calc(( 100% - #{var(--gutter-horizontal)})/2);
+  }
+
+  .col-1-of-3 {
+      width: calc((100% - 2 * #{var(--gutter-horizontal)})/3);
+  }
+  .col-2-of-3 {
+      width: calc(2 * ((100% - 2 * #{var(--gutter-horizontal)})/3) + #{var(--gutter-horizontal)});
+  }
+  .col-1-of-4 {
+      width: calc((100% - 3 * #{var(--gutter-horizontal)})/4);
+
+  }
+  .col-2-of-4 {
+      width: calc(2 * ((100% - 3 * #{var(--gutter-horizontal)})/4) + #{var(--gutter-horizontal)});
+
+  }
+  .col-3-of-4 {
+      width: calc(3 * ((100% - 3 * #{var(--gutter-horizontal)})/4) + 2 * #{var(--gutter-horizontal)});
+
+  }
+}
+
+// --------------------- components ------------------------- //
+.highlight {
+  background-color: var(--color-tertiary);
+  padding: 0 .2rem;
+}
+
+// Button
+.btn {
+
+  &,
+  &:link,
+  &:visited {
+      text-transform: capitalize;
+      text-decoration: none;
+      padding: 1.0rem 2rem;
+      // display: inline-block;
+      // display: block;
+      // border-radius: 10rem;
+      transition: all .2s;
+      position: relative;
+      font-size: var(--default-font-size);
+      // background-image: linear-gradient(to right, var(--color-primary) 0%,
+      //         #56ab2f 51%,
+      //         var(--color-primary) 100%);
+      background: var(--color-tertiary);
+      //Change for the <button> element
+      border: none;
+      cursor: pointer;
+  }
+
+  &:hover {
+      // transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba(var(--color-black), 0.2);
+      background-position: right center;
+
+      &::after {
+          // transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+      }
+  }
+
+  &:active,
+  &:focus {
+      outline: none;
+      transform: translateY(-1px);
+      box-shadow: 0 .5rem 1rem rgba(var(--color-black), 0.2)
+  }
+
+}
