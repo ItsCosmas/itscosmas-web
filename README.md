@@ -1,5 +1,7 @@
 # Personal Portfolio
 
+![A Screenshot of the site](https://github.com/ItsCosmas/itscosmas/blob/master/src/assets/img/cozy.png) <br />
+
 This is my personal portfolio website available at https://itscosmas.me/ . Its written in modern Javascript and Preprocessed CSS :
 
   - React
@@ -41,7 +43,7 @@ $ npm build
 ```
 
 ### Firestore
-Find a tutorial for REact and Firestore here: https://sebhastian.com/react-firestore
+Find a tutorial for React and Firestore here: https://sebhastian.com/react-firestore
 
 License
 ----
@@ -49,4 +51,4 @@ License
 MIT
 
 
-**Free Software, But of course I'd appreciate some attribution 😃 !**
+**Free Software, But of course I'd appreciate some attribution  !**
