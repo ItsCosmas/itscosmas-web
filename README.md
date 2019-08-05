@@ -12,8 +12,6 @@ Illustrations were sourced at https://undraw.co/ a site for *Open-source illustr
 
 ### Tech
 
-Dillinger uses a number of open source projects to work properly:
-
 * [React](https://reactjs.org/) - A JavaScript library for building user interfaces
 * [Sass](https://sass-lang.com/) - Syntatically Awesome Style Sheets. *CSS with superpowers*
 * [Firebase](https://firebase.google.com/) - Build apps fast, without managing infrastructure. *Backed by Google, trusted by top apps*.
