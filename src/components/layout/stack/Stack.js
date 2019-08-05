@@ -31,8 +31,9 @@ const Stack = () => {
                         <div className={'grid-item'}>
                             <ul>
                                 <li className={'list-title'}><span role="img" aria-label="robot"> 🤖 </span> Deep-learning</li>
-                                <li>Keras & Tensorflow</li>
-                                <li>Pytoch</li>
+                                <li>Keras</li>
+                                <li>Tensorflow</li>
+                                {/* <li>Pytoch</li> */}
                             </ul>
                         </div>
                         <div className={'grid-item'}>
@@ -40,26 +41,26 @@ const Stack = () => {
                                 <li className={'list-title'}><span role="img" aria-label="cloud"> ☁️ </span> Deployment & Services </li>
                                 <li>Heroku</li>
                                 <li>Digital Ocean</li>
-                                <li>Docker</li>
                                 <li>Azure</li>
                                 <li>AWS</li>
                                 <li>C-panel</li>
                             </ul>
                         </div>
-                        <div className={'grid-item'}>
+                        {/* <div className={'grid-item'}>
                             <ul>
                                 <li className={'list-title'}><span role="img" aria-label="mobile phone"> 📱 </span> Mobile Development</li>
                                 <li>Flutter</li>
                                 <li>React Native</li>
                                 <li>Android Java</li>
                             </ul>
-                        </div>
+                        </div> */}
                         <div className={'grid-item'}>
                             <ul>
                                 <li className={'list-title'}><span role="img" aria-label="toolkit"> 🛠️ </span> Database, Toolkit & Others</li>
                                 <li>SQL/MySQL/Postgres/Sqlite</li>
                                 <li>NoSQL/Mongo/Firebase</li>
                                 <li>Git</li>
+                                <li>Docker</li>
                                 <li>Command line/Terminal</li>
                                 <li>Google Colab</li>
                             </ul>
