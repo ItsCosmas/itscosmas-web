@@ -7,6 +7,9 @@ const Project = props => {
 
     const { project } = props;
 
+    const stack = project.stack.map((item, key) =>
+        <span className={'highlight project-stack'} key={item}>{item}</span>
+    );
     let img;
 
     if(project.project_thumbnail == null){
@@ -26,14 +29,28 @@ const Project = props => {
         
     }
 
+    
+    // live and source variables
+    
+    let live_status = {}
+    let source_status = {}
+
     // Validate whether a link to live preview exists
     // If no link then disable anchorlink link
     // disabled anchorlinks are hidden by default with css
-    let link_status = {}
+
     if (project.links.live === null || project.links.live === "") {
-        link_status['disabled'] = true;
+        live_status['disabled'] = true;
     }else{
-        link_status['disabled'] = false;
+        live_status['disabled'] = false;
+    }
+
+    // Validate whether a link to source exists
+    
+    if (project.links.live === null || project.links.source === "") {
+        source_status['disabled'] = true;
+    }else{
+        source_status['disabled'] = false;
     }
 
     
@@ -45,14 +62,15 @@ const Project = props => {
             <div className="project__desc">
                 <h4 className="content-title">{project.name}</h4>
                 <p>{project.description}</p>
+                <p className={'project-p-stack'}>{stack}</p>
                 <div className={'project-links'}>
-                    <a href={project.links.source} className={'project-link'} target="_blank" rel="noopener noreferrer" >
+                    <a href={project.links.source} className={'project-link'} disabled={source_status['disabled']} target="_blank" rel="noopener noreferrer" >
                         <svg className={`project-link__icon`}>
                             <use xlinkHref={`${icons}#${'icon-code-fork'}`} />
                         </svg>
                         <span className={'btn u-center-text'}>Source &#8594;</span>
                     </a>
-                    <a href={project.links.live} className={'project-link'} disabled={link_status['disabled']} target="_blank" rel="noopener noreferrer">
+                    <a href={project.links.live} className={'project-link'} disabled={live_status['disabled']} target="_blank" rel="noopener noreferrer">
                         <svg className={`project-link__icon`}>
                             <use xlinkHref={`${icons}#${'icon-earth'}`} />
                         </svg>
