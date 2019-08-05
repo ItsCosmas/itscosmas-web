@@ -15,7 +15,7 @@ class Projects extends Component {
                         return(
                             <React.Fragment>
                                 {project_list.map(item => (
-                                    <Project key={item} project={item.body}/>
+                                    <Project key={item.body.project_id} project={item.body}/>
                                 ))}
                             </React.Fragment>
                         )
