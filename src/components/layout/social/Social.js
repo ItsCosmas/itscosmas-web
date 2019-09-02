@@ -39,14 +39,14 @@ const Social = () => {
                         <span className={'u-center-text'}>medium</span>
                     </a>
                 </li>
-                <li className={'social-item'}>
+                {/* <li className={'social-item'}>
                     <a href={`https://drive.google.com/file/d/1BU4iuL-txtj4GdldykoBkFBiAoBt_XuJ/view?usp=sharing`} target={'_blank'} className={'social-link'}>
                         <svg className={`social-icon`}>
 			                <use xlinkHref={`${icons}#${'icon-newspaper'}`} />
 		                </svg>
                         <span className={'u-center-text'}>resume</span>
                     </a>
-                </li>
+                </li> */}
             </ul>
         </div>
     )
