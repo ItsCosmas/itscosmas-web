@@ -1,0 +1,5 @@
+/*    /index.html  200
+
+# Redirect default Netlify subdomain to primary domain
+https://itscosmas.netlify.com/* https://itscosmas.me/:splat 301!
+
