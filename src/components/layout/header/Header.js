@@ -15,11 +15,11 @@ const Header = () => {
 					<div className={'header-action'}>
 						<TypedComponent />
 						<div>
-							I am Performance-driven and motivated{' '}
+							I am performance-driven and motivated{' '}
 							<span className={'highlight'}>
 								Full Stack Developer{' '}
 							</span>{' '}
-							who Possess a key attention to detail and best
+							who possess a key attention to detail and best
 							practices, well-developed time management skills,
 							ability to complete all projects within schedule and
 							in a timely manner as well as a lifelong learner who
