@@ -1,6 +1,10 @@
-# Personal Portfolio
+# Personal Portfolio Website
 
 ![A Screenshot of the site](https://github.com/ItsCosmas/itscosmas/blob/master/src/assets/img/cozy.png) <br />
+
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7caf2c76-ee2c-4dc0-a183-4720462ad346/deploy-status)](https://app.netlify.com/sites/itscosmas/deploys)
+
 
 This is my personal portfolio website available at https://itscosmas.me/ . Its written in modern Javascript and Preprocessed CSS :
 
