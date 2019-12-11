@@ -1,18 +1,17 @@
-@import '../../../mixins.scss';
+@import '../../../assets/scss/mixins';
 // Horizontal Top Nav
 .navbar {
 	position: sticky;
 	z-index: var(--z-index-k);
 
+	background: var(--bg-color);
 	top: 0;
 	height: 6rem;
 	width: 100%;
-	border-bottom: 0.1rem solid var(--color-white-dark);
 
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background: var(--color-white);
 	font-size: 1.6rem;
 
 	@include respond(mobile-large) {
@@ -28,15 +27,14 @@
 			font-size: 2.5rem;
 			font-weight: 900;
 			padding-left: 2rem;
-			@include respond(mobile-large) {
+			@include respond(tablet) {
 				height: 3rem;
 				font-size: 2rem;
 				padding-left: 1rem;
 			}
 		}
 		&-link {
-			text-decoration: none;
-			cursor: pointer;
+			@include ResetLink();
 		}
 	}
 
@@ -46,40 +44,36 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		color: var(--color-secondary);
 		padding-right: 2rem;
 
-		@include respond(mobile-large) {
-			padding-right: 0rem;
-		}
-	}
-
-	&__item {
-		display: inline-block;
-		text-align: center;
-		text-transform: capitalize;
-		padding: 1rem 1.5rem;
-
-		@include respond(mobile-large) {
-			padding: 1rem 0rem;
+		@include respond(tablet) {
+			padding-right: 1rem;
 		}
 
-		align-items: center;
+		&--item {
+			display: inline-block;
+			text-align: center;
+			text-transform: capitalize;
+			padding: 1rem 1.5rem;
 
-		position: relative;
+			@include respond(tablet) {
+				padding: 1rem;
+			}
 
-		&:hover {
-			background-color: var(--color-tertiary);
+			align-items: center;
+
+			position: relative;
+
+			&:hover {
+				background-color: var(--color-tertiary);
+			}
 		}
-	}
+		&--link {
+			@include ResetLink();
 
-	&__link {
-		text-decoration: none;
-		color: inherit;
-
-		&:hover {
-			text-decoration: none;
-			color: inherit;
+			&:hover {
+				@include ResetLink();
+			}
 		}
 	}
 }
