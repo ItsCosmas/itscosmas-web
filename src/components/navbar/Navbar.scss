@@ -1,13 +1,12 @@
-@import '../../../assets/scss/mixins';
+@import '../../assets/scss/mixins';
 // Horizontal Top Nav
 .navbar {
 	position: sticky;
 	z-index: var(--z-index-k);
 
 	background: var(--bg-color);
+	height: 8rem;
 	top: 0;
-	height: 6rem;
-	width: 100%;
 
 	display: flex;
 	justify-content: space-between;
@@ -20,8 +19,6 @@
 
 	&__logo {
 		&-name {
-			// display: flex;
-			// justify-content: center;
 			cursor: pointer;
 			height: 3.25rem;
 			font-size: 2.5rem;
@@ -50,6 +47,10 @@
 			padding-right: 1rem;
 		}
 
+		@include respond(mobile-medium) {
+			padding-right: 0.5rem;
+		}
+
 		&--item {
 			display: inline-block;
 			text-align: center;
@@ -58,6 +59,9 @@
 
 			@include respond(tablet) {
 				padding: 1rem;
+			}
+			@include respond(mobile-medium) {
+				padding: 0.5rem;
 			}
 
 			align-items: center;
@@ -73,6 +77,21 @@
 
 			&:hover {
 				@include ResetLink();
+			}
+		}
+
+		&--icon {
+			cursor: pointer;
+			height: 4rem;
+			width: 4rem;
+
+			@include respond(tablet) {
+				height: 3.5rem;
+				width: 3.5rem;
+			}
+			@include respond(mobile-medium) {
+				height: 3rem;
+				width: 3rem;
 			}
 		}
 	}

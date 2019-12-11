@@ -1,6 +1,6 @@
 import React from 'react';
 import './Project.scss';
-import icons from '../../../assets/icons/sprite.svg';
+import icons from '../../assets/icons/sprite.svg';
 
 const Project = (props) => {
 	const { project } = props;
@@ -13,15 +13,15 @@ const Project = (props) => {
 	let img;
 
 	if (project.project_thumbnail == null) {
-		img = require('../../../assets/img/no_img.png');
+		img = require('../../assets/img/no_img.png');
 	} else {
 		// check if image corresponding to return thumbnail exist
 		// assign it to img if exist and assign no_img if not exist
 		try {
-			img = require(`../../../assets/img/${project.project_thumbnail}`);
+			img = require(`../../assets/img/${project.project_thumbnail}`);
 		} catch (e) {
 			if (e.code === 'MODULE_NOT_FOUND') {
-				img = require('../../../assets/img/no_img.png');
+				img = require('../../assets/img/no_img.png');
 			}
 		}
 	}

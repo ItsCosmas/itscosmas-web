@@ -1,5 +1,5 @@
 import React from 'react';
-import icons from '../../../assets/icons/sprite.svg';
+import icons from '../../assets/icons/sprite.svg';
 import './Social.scss';
 
 const Social = () => {

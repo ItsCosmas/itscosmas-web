@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import { Link } from 'react-router-dom';
-import dev from '../../../assets/illustration/dev.svg';
+import dev from '../../assets/illustration/dev.svg';
 
 import TypedComponent from '../typed/TypedComponent';
 import Social from '../social/Social';

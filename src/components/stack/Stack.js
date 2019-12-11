@@ -1,5 +1,5 @@
 import React from 'react';
-import devStack from '../../../assets/illustration/dev-stack.svg';
+import devStack from '../../assets/illustration/dev-stack.svg';
 import './Stack.scss';
 
 const Stack = () => {

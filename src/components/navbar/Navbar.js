@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import icons from '../../assets/icons/sprite.svg';
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -31,6 +32,12 @@ const Navbar = () => {
 						<a href={'#contact'} className={'navbar__list--link'}>
 							Contact
 						</a>
+					</li>
+					<li className={'navbar__list--item'}>
+						<svg
+							className={`navbar__list--icon fill--prussianBlue`}>
+							<use xlinkHref={`${icons}#${'icon-sun'}`} />
+						</svg>
 					</li>
 				</ul>
 			</div>
