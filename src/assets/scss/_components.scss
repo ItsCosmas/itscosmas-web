@@ -1,0 +1,78 @@
+// --------------------- components ------------------------- //
+// Button
+.btn {
+	&,
+	&:link,
+	&:visited {
+		text-transform: capitalize;
+		text-decoration: none;
+		padding: 1rem 2rem;
+		transition: all 0.2s;
+		position: relative;
+		font-size: var(--default-font-size);
+		color: var(--color-white);
+		background: var(--color-action);
+		border-radius: 10rem;
+		cursor: pointer;
+	}
+
+	&:hover {
+		box-shadow: 0 1rem 2rem rgba(var(--color-black), 0.2);
+		background-position: right center;
+
+		&::after {
+			opacity: 0;
+		}
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
+		transform: translateY(-1px);
+		box-shadow: 0 0.5rem 1rem rgba(var(--color-black), 0.2);
+	}
+
+	&--white {
+		background-color: var(--color-white);
+		color: var(--color-boulder);
+
+		&::after {
+			background-color: var(--color-white);
+		}
+	}
+}
+
+.btn-cta {
+	border: none;
+}
+
+.btn-text {
+	font-size: var(--default-font-size);
+	color: var(--color-primary);
+	text-decoration: none;
+	display: inline-block;
+	border: none;
+	padding: 1px 2px;
+	transition: all 0.2s;
+
+	&:link,
+	&:visited {
+		font-size: var(--default-font-size);
+		color: var(--color-primary);
+		text-decoration: none;
+		display: inline-block;
+		border: none;
+		padding: 3px;
+		transition: all 0.2s;
+	}
+
+	&:hover {
+		color: var(--color-white);
+		background-color: var(--color-primary);
+		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+	}
+
+	&:active {
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	}
+}
