@@ -1,28 +1,22 @@
-import React, { Component } from 'react';
-import { Consumer } from '../../context';
-import Spinner from '../../components/layout/spinner/Spinner';
-import Blog from '../../components/layout/blog/Blog';
+import React, { useContext } from 'react';
+import { StateContext } from '../../context';
+import Spinner from '../../components/spinner/Spinner';
+import Blog from '../../components/blog/Blog';
 
-class Projects extends Component {
-    render(){
-        return(
-            <Consumer>
-                {value =>{
-                    const { blog_list } = value;
-                    if (blog_list === undefined || blog_list.length === 0) {
-                        return <Spinner message = "Getting Blogs ..." />
-                    } else {
-                        return(
-                            <React.Fragment>
-                                {blog_list.map(item => (
-                                    <Blog key={item} blog={item.body}/>
-                                ))}
-                            </React.Fragment>
-                        )
-                    }
-                }}
-            </Consumer>
-        )
-    }
-}
-export default Projects;
+const Blogs = () => {
+	const [state] = useContext(StateContext);
+	const { blogList } = state;
+
+	if (blogList === undefined || blogList.length === 0) {
+		return <Spinner message='Getting Blogs ...' />;
+	} else {
+		return (
+			<React.Fragment>
+				{blogList.map((item) => (
+					<Blog key={item} blog={item.body} />
+				))}
+			</React.Fragment>
+		);
+	}
+};
+export default Blogs;

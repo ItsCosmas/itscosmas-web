@@ -1,34 +1,23 @@
-import React, { Component } from 'react';
-import { Consumer } from '../../context';
-import Spinner from '../../components/layout/spinner/Spinner';
-import Project from '../../components/layout/project/Project';
+import React, { useContext } from 'react';
+import { StateContext } from '../../context';
 
-class Projects extends Component {
-	render() {
+import Spinner from '../../components/spinner/Spinner';
+import Project from '../../components/project/Project';
+
+const Projects = () => {
+	const [state] = useContext(StateContext);
+	const { projectList } = state;
+
+	if (projectList === undefined || projectList.length === 0) {
+		return <Spinner message='Getting Projects ...' />;
+	} else {
 		return (
-			<Consumer>
-				{(value) => {
-					const { project_list } = value;
-					if (
-						project_list === undefined ||
-						project_list.length === 0
-					) {
-						return <Spinner message='Getting Projects ...' />;
-					} else {
-						return (
-							<React.Fragment>
-								{project_list.map((item) => (
-									<Project
-										key={item.project_id}
-										project={item}
-									/>
-								))}
-							</React.Fragment>
-						);
-					}
-				}}
-			</Consumer>
+			<React.Fragment>
+				{projectList.map((item) => (
+					<Project key={item.project_id} project={item} />
+				))}
+			</React.Fragment>
 		);
 	}
-}
+};
 export default Projects;

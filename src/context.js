@@ -1,16 +1,22 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { db } from './firebase';
 
-const Context = React.createContext();
+export const StateContext = React.createContext();
 
-export class Provider extends Component {
-	state = {
-		project_list: [],
-		blog_list: []
+export function ContextController({ children }) {
+	const intialState = {
+		projectList: [],
+		blogList: []
 	};
 
-	componentDidMount() {
+	const [state, setState] = useState(intialState);
+
+	useEffect(() => {
+		fetchData();
+	}, []);
+
+	async function fetchData() {
 		// get all projects
 		db.collection('projects')
 			.get()
@@ -26,8 +32,10 @@ export class Provider extends Component {
 				sorted.sort(
 					(a, b) => parseInt(b.project_id) - parseFloat(a.project_id)
 				);
-
-				this.setState({ project_list: sorted });
+				setState((state) => ({
+					...state,
+					projectList: sorted
+				}));
 			});
 
 		// get all blogs
@@ -35,17 +43,16 @@ export class Provider extends Component {
 			.get()
 			.then((querySnapshot) => {
 				const data = querySnapshot.docs.map((doc) => doc.data());
-				this.setState({ blog_list: data });
+				setState((state) => ({
+					...state,
+					blogList: data
+				}));
 			});
 	}
 
-	render() {
-		return (
-			<Context.Provider value={this.state}>
-				{this.props.children}
-			</Context.Provider>
-		);
-	}
+	return (
+		<StateContext.Provider value={[state, setState]}>
+			{children}
+		</StateContext.Provider>
+	);
 }
-
-export const Consumer = Context.Consumer;
