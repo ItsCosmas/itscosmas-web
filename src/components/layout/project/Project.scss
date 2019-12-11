@@ -1,83 +1,78 @@
-@import '../../../mixins.scss';
+@import '../../../assets/scss/mixins';
 .project {
-    padding: 3rem 0;
-    box-shadow: 0 3rem 6rem rgba(var(--color-primary), .5);
-    display: flex;
+	padding: 3rem 0;
+	display: flex;
 
-    @include respond(tablet){
-        // display: flex;
-        flex-direction: column;
-    }
+	@include respond(tablet) {
+		// display: flex;
+		flex-direction: column;
+	}
 
-    &__thumbnail{
-        flex: 30%;
-        float: left;
+	&__thumbnail {
+		flex: 30%;
 
-        @include respond(tablet){
-            padding: 0;
-        }
+		@include respond(tablet) {
+			padding: 0;
+		}
 
+		&--img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__desc {
+		flex: 70%;
+		display: flex;
+		flex-direction: column;
+		padding-left: 4rem;
+		@include respond(tablet) {
+			padding: 0;
+		}
+	}
 
-        &-img{
-            width: 100%;
-            height: auto;
-        }
-    }
-    &__desc{
-        flex: 70%;
-        float: right;
-        display: flex;
-        flex-direction: column;
-        padding-left: 4rem;
-        @include respond(tablet){
-            padding: 0;
-        }
-    }
+	&__links {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		align-content: center;
 
-    &-links{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        align-content: center;
+		padding: 1rem 0;
 
-        padding: 1rem 0;
+		a[disabled] {
+			pointer-events: none;
+			display: none;
+		}
+	}
+	&__link {
+		display: block;
+		text-decoration: none;
+		margin-top: 2rem;
+		display: flex;
+		align-items: center;
 
-        a[disabled] {
-            pointer-events: none;
-            display: none;
-        }
-    }
-    &-link{
+		span,
+		svg {
+			margin-left: 2rem;
+		}
 
-        display: block;
-        text-decoration: none;
-        margin-top: 2rem;
-        display: flex;
-        align-items: center;
+		&--icon {
+			width: 3rem;
+			height: 3rem;
+		}
+	}
 
-        span, svg{
-            margin-left: 2rem;
-        }
+	&-p-stack {
+		padding-top: 2rem;
+	}
 
-        &__icon{
-            width: 3rem;
-            height: 3rem;
-        }
-    }
-
-    &-p-stack{
-        padding-top: 2rem;
-       
-    }
-
-    &-stack {
-        padding: .2rem .4rem;
-        display: inline-block;
-        &:not(:first-child){
-            margin-left: 1rem;
-        }
-        @include respond(mobile-large){
-            margin-top: 1rem;
-        }
-    }
+	&__stack {
+		padding: 0.2rem 0.4rem;
+		display: inline-block;
+		&:not(:first-child) {
+			margin-left: 1rem;
+		}
+		@include respond(mobile-large) {
+			margin-top: 1rem;
+		}
+	}
 }
