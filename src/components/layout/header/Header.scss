@@ -1,24 +1,24 @@
-@import '../../../mixins.scss';
+@import '../../../assets/scss/mixins';
 
 .header {
-    padding: 6rem 0;
+	padding: 6rem 0;
+	display: flex;
 
-    @include respond(tablet) {
-        .row {
-            display: flex;
-            flex-direction: column-reverse;
-        }
-    }
-}
+	@include respond(tablet) {
+		flex-direction: column-reverse;
+	}
 
-.header-action {
-    padding-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    // justify-content: space-between;
-}
+	&__cta {
+		flex: 0 0 50%;
+		padding-top: 5rem;
+		display: flex;
+		flex-direction: column;
+	}
 
-.header-illustration {
-    width: 100%;
-    height: auto;
+	&__visual {
+		flex: 0 0 1;
+		&--img {
+			@include ResponsiveImage();
+		}
+	}
 }

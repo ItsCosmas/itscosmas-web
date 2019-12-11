@@ -1,0 +1,133 @@
+// clearfix
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+// Reset Link
+@mixin ResetLink {
+	text-decoration: none;
+	color: inherit;
+
+	&:hover {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+// Responsive Image
+@mixin ResponsiveImage {
+	width: 100%;
+	height: auto;
+}
+
+// Media Query Manager
+/* 
+0-320px: mobile-small
+0 - 375px: mobile-medium
+376px - 425px: mobile-large 
+425px - 600px: tablet-small
+426 - 768px: tablet
+768px - 944px: tablet-large
+944px - 1024px: laptop-small
+1024 - 1200px: laptop
+1200 -1440px: laptop-large
+1440 - 2560px: 4K
+
+$breakpoint argument choices
+- mobile-small
+- mobile-medium
+- mobile-large
+- tablet-small
+- tablet
+- laptop
+- laptop-large
+- four-k
+
+ORDER: base + typography > general layout + grid > page components > components
+
+1em = 16px
+
+*/
+
+@mixin respond($breakpoint) {
+	@if $breakpoint==mobile-small {
+		// Code goes here
+		@media only screen and (max-width: 20em) {
+			// 320px
+			@content;
+		}
+	}
+	@if $breakpoint==mobile-medium {
+		// Code goes here
+		@media only screen and (max-width: 23.4375em) {
+			// 375px
+			@content;
+		}
+	}
+	@if $breakpoint==mobile-large {
+		// Code goes here
+		@media only screen and (max-width: 26.5625em) {
+			// 425px
+			@content;
+		}
+	}
+
+	@if $breakpoint==tablet-small {
+		// Code goes here
+		@media only screen and (max-width: 37.5em) {
+			// 600px
+			@content;
+		}
+	}
+
+	@if $breakpoint==tablet {
+		// Code goes here
+		@media only screen and (max-width: 48em) {
+			// 768px
+			@content;
+		}
+	}
+
+	@if $breakpoint==tablet-large {
+		// Code goes here
+		@media only screen and (max-width: 59em) {
+			// 944px
+			@content;
+		}
+	}
+
+	@if $breakpoint==laptop-small {
+		// Code goes here
+		@media only screen and (max-width: 75em) {
+			// 1200px
+			@content;
+		}
+	}
+
+	@if $breakpoint==laptop {
+		// Code goes here
+		@media only screen and (max-width: 64em) {
+			// 1024px
+			@content;
+		}
+	}
+	@if $breakpoint==laptop-large {
+		// Code goes here
+		@media only screen and (max-width: 90em) {
+			// 1440px
+			@content;
+		}
+	}
+
+	@if $breakpoint==four-k {
+		// Code goes here
+		@media only screen and (max-width: 160em) {
+			// 2560px
+			@content;
+		}
+	}
+}

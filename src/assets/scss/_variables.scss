@@ -1,0 +1,38 @@
+// --------------------- variables -------------------------------//
+// css variables and sass variables
+
+:root {
+	// colors
+	// Color names were gotten from this site http://chir.ag/projects/name-that-color/
+	--color-prussianBlue: #002458;
+	--color-azureRadiance: #007bff;
+	--color-radicalRed: #ff3366;
+	--color-boulder: #777777;
+	--color-mirage: #15202b;
+	--color-purpleHeart: #8a2be2;
+	--color-portGore: #222244;
+	--color-regentGray: #8899a6;
+
+	--color-white: #fff;
+	--color-white-dark: #f0f0f0;
+	--color-black: #000;
+
+	--color-primary: var(--color-prussianBlue);
+	--color-secondary: var(--color-azureRadiance);
+	--color-tertiary: rgba(0, 123, 255, 0.08); // deepFir
+	--color-action: var(--color-radicalRed);
+
+	--bg-color: var(--color-white);
+	// --bg-color: var(--color-mirage);
+
+	// shadows
+	--shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+	--shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+	// font
+	--default-font-size: 1.4rem;
+	--default-font-family: 'M PLUS Rounded 1c', sans-serif;
+
+	// z-indexes
+	--z-index-k: 1000;
+}

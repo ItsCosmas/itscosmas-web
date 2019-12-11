@@ -1,44 +1,39 @@
-@import '../../../mixins.scss';
+@import '../../../assets/scss/mixins';
 
-.social{
-    display: flex;
-    float: left;
-    
-    @include respond(mobile-medium){
-        justify-content: center;
-    }
-}
-.social-list{
-    list-style: none;
-    display: inline-block;
-    padding: 2rem 2rem 2rem 0;
-    display: flex;
-    justify-content: center;
+.social {
+	display: flex;
 
-    @include respond(mobile-medium){
-        padding: 2rem 0;
-    }
-}
-.social-item{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+	&__list {
+		list-style: none;
+		display: flex;
+		justify-content: center;
 
-    span {
-        display: block;
-    }
-}
-.social-link{
-    color: var(--color-primary);
-    text-decoration: none;
-}
-.social-icon{
-    height: 3rem;
-    width: 3rem;
-    fill: var(--color-primary);
+		&--item {
+			padding: 0 1.6rem;
+			@include respond(tablet) {
+				padding: 0 1rem;
+			}
+			display: flex;
+			flex-direction: column;
+			text-align: center;
 
-    @include respond(mobile-medium){
-        height: 2.5rem;
-        width: 2.5rem;
-    }
+			span {
+				display: block;
+			}
+		}
+		&--link {
+			@include ResetLink();
+			color: var(--color-primary);
+		}
+
+		&--icon {
+			height: 3rem;
+			width: 3rem;
+
+			@include respond(tablet) {
+				height: 2.5rem;
+				width: 2.5rem;
+			}
+		}
+	}
 }

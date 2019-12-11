@@ -1,0 +1,107 @@
+html {
+	font-size: 62.5%; // 1rem = 10px
+
+	@include respond(four-k) {
+		font-size: 75%; // 1rem = 12px
+	}
+
+	@include respond(laptop-large) {
+		font-size: 62.5%;
+	}
+
+	@include respond(tablet) {
+		// width < 1200
+		font-size: 56.25%; // 1rem = 9px
+	}
+
+	@include respond(mobile-large) {
+		// width < 900
+		font-size: 50%; // 1rem = 8px
+	}
+}
+
+.heading {
+	&__primary {
+		font-weight: 700;
+		font-size: 3rem;
+
+		&--prussianBlue {
+			color: var(--color-prussianBlue);
+		}
+		&--white {
+			color: var(--color-white);
+		}
+	}
+	&__secondary {
+		font-weight: 500;
+		font-size: 2.5rem;
+
+		&--prussianBlue {
+			color: var(--color-prussianBlue);
+		}
+		&--white {
+			color: var(--color-white);
+		}
+	}
+	&__tertiary {
+		font-weight: 400;
+		font-size: 1.6rem;
+	}
+}
+
+.text {
+	&__highlight {
+		background-color: var(--color-tertiary);
+		padding: 0 0.2rem;
+	}
+	&__content {
+		font-size: var(--default-font-size);
+		&--cta {
+			font-weight: 500;
+			line-height: 1.5;
+		}
+		&--normal {
+			font-size: 1.6rem;
+			font-weight: 400;
+			line-height: 2;
+		}
+	}
+	&--white {
+		color: var(--color-white);
+	}
+	&--black {
+		color: var(--color-black);
+	}
+	&--regentGray {
+		color: var(--color-regentGray);
+	}
+	&--prussianBlue {
+		color: var(--color-prussianBlue);
+	}
+	&--azureRadiance {
+		color: var(--color-azureRadiance);
+	}
+}
+.fill {
+	&--prussianBlue {
+		fill: var(--color-prussianBlue);
+	}
+}
+.section-title {
+	font-weight: 700;
+	font-size: 3rem;
+	color: var(--color-primary);
+	border-bottom: 0.1rem solid var(--color-white-dark);
+}
+
+.content-title {
+	font-weight: 400;
+	font-size: 3rem;
+	color: var(--color-primary);
+}
+
+// --------------------- components ------------------------- //
+.text__highlight {
+	background-color: var(--color-tertiary);
+	padding: 0 0.2rem;
+}
