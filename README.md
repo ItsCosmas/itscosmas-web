@@ -2,7 +2,7 @@
 
 ![A Screenshot of the site](https://github.com/ItsCosmas/itscosmas/blob/master/src/assets/img/cozy.png) <br />
 
-![Twitter Follow](https://img.shields.io/twitter/follow/itscosmas?label=Follow%20Me%20&style=social)
+[![Twitter Follow](https://img.shields.io/twitter/follow/itscosmas?label=Follow%20Me%20&style=social)](https://twitter.com/itsCosmas/)
 
 ![Netlify](https://img.shields.io/netlify/7caf2c76-ee2c-4dc0-a183-4720462ad346)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7caf2c76-ee2c-4dc0-a183-4720462ad346/deploy-status)](https://app.netlify.com/sites/itscosmas/deploys)
