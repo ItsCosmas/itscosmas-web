@@ -2,7 +2,14 @@
 
 ![A Screenshot of the site](https://github.com/ItsCosmas/itscosmas/blob/master/src/assets/img/cozy.png) <br />
 
+![Twitter Follow](https://img.shields.io/twitter/follow/itscosmas?label=Follow%20Me%20&style=social)
+
+![Netlify](https://img.shields.io/netlify/7caf2c76-ee2c-4dc0-a183-4720462ad346)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7caf2c76-ee2c-4dc0-a183-4720462ad346/deploy-status)](https://app.netlify.com/sites/itscosmas/deploys)
+
+![GitHub language count](https://img.shields.io/github/languages/count/itscosmas/itscosmas)
+![GitHub top language](https://img.shields.io/github/languages/top/itscosmas/itscosmas)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/itscosmas/itscosmas/react)
 
 This is my personal portfolio website available at https://itscosmas.me/ . Its written in ES6 Javascript and CSS preprocessor Sass :
 
@@ -67,4 +74,6 @@ $ npm build
 
 MIT
 
-**Free Software**
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+![GitHub](https://img.shields.io/github/license/itscosmas/itscosmas)
