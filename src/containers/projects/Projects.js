@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { StateContext } from '../../context';
+import { StateContext } from '../../StateContext';
 
 import Spinner from '../../components/spinner/Spinner';
 import Project from '../../components/project/Project';

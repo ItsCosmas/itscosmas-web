@@ -1,3 +1,4 @@
+@import '../../assets/scss/variables';
 @import '../../assets/scss/mixins';
 // Horizontal Top Nav
 .navbar {
@@ -19,6 +20,7 @@
 
 	&__logo {
 		&-name {
+			color: var(--text-color-tertiary);
 			cursor: pointer;
 			height: 3.25rem;
 			font-size: 2.5rem;
@@ -36,6 +38,7 @@
 	}
 
 	&__list {
+		color: var(--text-color-tertiary);
 		list-style-type: none;
 		height: 100%;
 		display: flex;

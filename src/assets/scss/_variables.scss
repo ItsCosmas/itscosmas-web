@@ -12,6 +12,7 @@
 	--color-purpleHeart: #8a2be2;
 	--color-portGore: #222244;
 	--color-regentGray: #8899a6;
+	--color-iron: #d3d4d4;
 	--color-gold: #ffd700;
 
 	--color-white: #fff;
@@ -22,9 +23,16 @@
 	--color-secondary: var(--color-azureRadiance);
 	--color-tertiary: rgba(0, 123, 255, 0.08); // deepFir
 	--color-action: var(--color-radicalRed);
+	--color-highlight: var(--color-tertiary);
+
+	--text-color-primary: var(--color-black);
+	--text-color-secondary: var(--color-prussianBlue);
+	--text-color-tertiary: var(--color-azureRadiance);
+
+	--fill-switch: var(--color-azureRadiance);
+	--fill-primary: var(--color-prussianBlue);
 
 	--bg-color: var(--color-white);
-	// --bg-color: var(--color-mirage);
 
 	// shadows
 	--shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);

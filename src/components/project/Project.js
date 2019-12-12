@@ -59,7 +59,7 @@ const Project = (props) => {
 				/>
 			</div>
 			<div className='project__desc'>
-				<h4 className='content-title'>{project.name}</h4>
+				<h4 className='heading__secondary'>{project.name}</h4>
 				<p>{project.description}</p>
 				<p className={'project-p-stack'}>{stack}</p>
 				<div className={'project__links'}>

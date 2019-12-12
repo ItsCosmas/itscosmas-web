@@ -5,11 +5,9 @@ import './Stack.scss';
 const Stack = () => {
 	return (
 		<section className={'stack'} id='stack'>
-			<h1 className='heading__primary text--prussianBlue'>
-				Skills & Technologies
-			</h1>
+			<h1 className='heading__primary'>Skills & Technologies</h1>
 			<div className='stack__container'>
-				<div className={'stack__grid text--prussianBlue'}>
+				<div className={'stack__grid'}>
 					<div className={'stack__grid--item'}>
 						<ul>
 							<li className={'stack__list--title'}>

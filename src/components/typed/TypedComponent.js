@@ -3,7 +3,7 @@ import Typed from 'react-typed';
 
 const TypedComponent = (props) => {
 	return (
-		<h1 className={'heading__secondary text--prussianBlue'}>
+		<h1 className={'heading__primary'}>
 			<Typed
 				strings={[
 					'Hi, I\'m Cosmas <span class="waving-hand">👋🏾</span>'

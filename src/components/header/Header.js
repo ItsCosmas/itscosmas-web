@@ -12,10 +12,7 @@ const Header = () => {
 			{/* Intro and Social go here */}
 			<div className={'header__cta'}>
 				<TypedComponent />
-				<div
-					className={
-						'text__content--cta text--black u-margin-bottom-small'
-					}>
+				<div className={'text__content--cta u-margin-bottom-small'}>
 					I am performance-driven and motivated{' '}
 					<span className={'text__highlight'}>
 						Full Stack Developer
@@ -32,7 +29,7 @@ const Header = () => {
 					.
 				</div>
 				<Social />
-				<div className={'u-margin-top-small'}>
+				<div className={'u-margin-top-medium'}>
 					<Link to={'projects'} className={'btn btn-cta'}>
 						Check out my Work &#8594;
 					</Link>

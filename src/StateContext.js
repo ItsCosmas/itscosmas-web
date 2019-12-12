@@ -4,7 +4,7 @@ import { db } from './firebase';
 
 export const StateContext = React.createContext();
 
-export function ContextController({ children }) {
+export function StateProvider({ children }) {
 	const intialState = {
 		projectList: [],
 		blogList: []

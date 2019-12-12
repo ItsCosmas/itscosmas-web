@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import icons from '../../assets/icons/sprite.svg';
 import './Navbar.scss';
 
+import ThemeContext from '../../ThemeContext';
+
 const Navbar = () => {
+	const { toggle } = useContext(ThemeContext);
+
 	return (
 		<div className={'navbar'}>
-			<div className={'navbar__logo-name text--azureRadiance'}>
+			<div className={'navbar__logo-name'}>
 				<Link to='/' className='navbar__logo-link'>
 					Cozy
 				</Link>
 			</div>
 			<div className={'navbar__nav'}>
-				<ul className={'navbar__list text--azureRadiance'}>
+				<ul className={'navbar__list'}>
 					<li className={'navbar__list--item'}>
 						<a href={'/#stack'} className={'navbar__list--link'}>
 							Stack
@@ -33,9 +37,10 @@ const Navbar = () => {
 							Contact
 						</a>
 					</li>
-					<li className={'navbar__list--item'}>
-						<svg
-							className={`navbar__list--icon fill--prussianBlue`}>
+					<li
+						className={'navbar__list--item'}
+						onClick={() => toggle()}>
+						<svg className={`navbar__list--icon fill--switch`}>
 							<use xlinkHref={`${icons}#${'icon-sun'}`} />
 						</svg>
 					</li>
