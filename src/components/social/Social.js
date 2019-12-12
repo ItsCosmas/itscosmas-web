@@ -1,5 +1,5 @@
 import React from 'react';
-import icons from '../../../assets/icons/sprite.svg';
+import icons from '../../assets/icons/sprite.svg';
 import './Social.scss';
 
 const Social = () => {
@@ -11,11 +11,12 @@ const Social = () => {
 						href={`https://github.com/ItsCosmas`}
 						target={'_blank'}
 						className={'social__list--link'}>
-						<svg
-							className={`social__list--icon fill--prussianBlue`}>
+						<svg className={`social__list--icon fill--primary`}>
 							<use xlinkHref={`${icons}#${'icon-github'}`} />
 						</svg>
-						<span className={'u-center-text'}>github</span>
+						<span className={'u-center-text text-color--secondary'}>
+							github
+						</span>
 					</a>
 				</li>
 				<li className={'social__list--item'}>
@@ -23,11 +24,12 @@ const Social = () => {
 						href={`https://linkedin.com/in/cosmasgikunju/`}
 						target={'_blank'}
 						className={'social__list--link'}>
-						<svg
-							className={`social__list--icon fill--prussianBlue`}>
+						<svg className={`social__list--icon fill--primary`}>
 							<use xlinkHref={`${icons}#${'icon-linkedin'}`} />
 						</svg>
-						<span className={'u-center-text'}>linkedin</span>
+						<span className={'u-center-text text-color--secondary'}>
+							linkedin
+						</span>
 					</a>
 				</li>
 				<li className={'social__list--item'}>
@@ -35,11 +37,12 @@ const Social = () => {
 						href={`https://dev.to/itscosmas`}
 						target={'_blank'}
 						className={'social__list--link'}>
-						<svg
-							className={`social__list--icon fill--prussianBlue`}>
+						<svg className={`social__list--icon fill--primary`}>
 							<use xlinkHref={`${icons}#${'icon-dev-dot-to'}`} />
 						</svg>
-						<span className={'u-center-text'}>dev</span>
+						<span className={'u-center-text text-color--secondary'}>
+							dev
+						</span>
 					</a>
 				</li>
 				<li className={'social__list--item'}>
@@ -47,11 +50,12 @@ const Social = () => {
 						href={`https://medium.com/@gikunjucosmas`}
 						target={'_blank'}
 						className={'social__list--link'}>
-						<svg
-							className={`social__list--icon fill--prussianBlue`}>
+						<svg className={`social__list--icon fill--primary`}>
 							<use xlinkHref={`${icons}#${'icon-medium'}`} />
 						</svg>
-						<span className={'u-center-text'}>medium</span>
+						<span className={'u-center-text text-color--secondary'}>
+							medium
+						</span>
 					</a>
 				</li>
 				<li className={'social__list--item'}>
@@ -59,11 +63,10 @@ const Social = () => {
 						href={`https://drive.google.com/file/d/1BU4iuL-txtj4GdldykoBkFBiAoBt_XuJ/view?usp=sharing`}
 						target={'_blank'}
 						className={'social__list--link'}>
-						<svg
-							className={`social__list--icon fill--prussianBlue`}>
+						<svg className={`social__list--icon fill--primary`}>
 							<use xlinkHref={`${icons}#${'icon-newspaper'}`} />
 						</svg>
-						<span className={'text--black u-center-text'}>
+						<span className={'u-center-text text-color--secondary'}>
 							resume
 						</span>
 					</a>

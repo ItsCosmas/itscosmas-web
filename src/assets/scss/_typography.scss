@@ -24,34 +24,31 @@ html {
 	&__primary {
 		font-weight: 700;
 		font-size: 3rem;
-
-		&--prussianBlue {
-			color: var(--color-prussianBlue);
-		}
-		&--white {
-			color: var(--color-white);
-		}
+		color: var(--text-color-tertiary);
 	}
 	&__secondary {
+		color: var(--text-color-tertiary);
 		font-weight: 500;
-		font-size: 2.5rem;
-
-		&--prussianBlue {
-			color: var(--color-prussianBlue);
-		}
-		&--white {
-			color: var(--color-white);
-		}
+		font-size: 2.8rem;
 	}
 	&__tertiary {
+		color: var(--text-color-secondary);
 		font-weight: 400;
 		font-size: 1.6rem;
 	}
 }
 
 .text {
+	&-color {
+		&--primary {
+			color: var(--text-color-primary);
+		}
+		&--secondary {
+			color: var(--text-color-secondary);
+		}
+	}
 	&__highlight {
-		background-color: var(--color-tertiary);
+		background-color: var(--color-highlight);
 		padding: 0 0.2rem;
 	}
 	&__content {
@@ -66,25 +63,13 @@ html {
 			line-height: 2;
 		}
 	}
-	&--white {
-		color: var(--color-white);
-	}
-	&--black {
-		color: var(--color-black);
-	}
-	&--regentGray {
-		color: var(--color-regentGray);
-	}
-	&--prussianBlue {
-		color: var(--color-prussianBlue);
-	}
-	&--azureRadiance {
-		color: var(--color-azureRadiance);
-	}
 }
 .fill {
-	&--prussianBlue {
-		fill: var(--color-prussianBlue);
+	&--switch {
+		fill: var(--fill-switch);
+	}
+	&--primary {
+		fill: var(--fill-primary);
 	}
 }
 .section-title {

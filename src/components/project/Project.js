@@ -1,6 +1,6 @@
 import React from 'react';
 import './Project.scss';
-import icons from '../../../assets/icons/sprite.svg';
+import icons from '../../assets/icons/sprite.svg';
 
 const Project = (props) => {
 	const { project } = props;
@@ -13,15 +13,15 @@ const Project = (props) => {
 	let img;
 
 	if (project.project_thumbnail == null) {
-		img = require('../../../assets/img/no_img.png');
+		img = require('../../assets/img/no_img.png');
 	} else {
 		// check if image corresponding to return thumbnail exist
 		// assign it to img if exist and assign no_img if not exist
 		try {
-			img = require(`../../../assets/img/${project.project_thumbnail}`);
+			img = require(`../../assets/img/${project.project_thumbnail}`);
 		} catch (e) {
 			if (e.code === 'MODULE_NOT_FOUND') {
-				img = require('../../../assets/img/no_img.png');
+				img = require('../../assets/img/no_img.png');
 			}
 		}
 	}
@@ -59,7 +59,7 @@ const Project = (props) => {
 				/>
 			</div>
 			<div className='project__desc'>
-				<h4 className='content-title'>{project.name}</h4>
+				<h4 className='heading__secondary'>{project.name}</h4>
 				<p>{project.description}</p>
 				<p className={'project-p-stack'}>{stack}</p>
 				<div className={'project__links'}>

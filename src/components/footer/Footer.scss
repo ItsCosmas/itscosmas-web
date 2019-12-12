@@ -1,5 +1,9 @@
+@import '../../assets/scss/mixins';
 .footer {
 	padding: 6rem 0;
+	@include respond(tablet) {
+		text-align: center;
+	}
 }
 .contact__details {
 	padding: 2rem 0;

@@ -1,5 +1,7 @@
 .blog {
 	padding: 3rem 0;
+	color: var(--text-color-secondary);
+
 	box-shadow: 0 3rem 6rem rgba(var(--color-primary), 0.5);
 	// display: flex;
 
@@ -24,6 +26,7 @@
 		}
 
 		&--icon {
+			fill: var(--fill-primary);
 			width: 3rem;
 			height: 3rem;
 		}
