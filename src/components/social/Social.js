@@ -58,7 +58,7 @@ const Social = () => {
 						</span>
 					</a>
 				</li>
-				<li className={'social__list--item'}>
+				{/* <li className={'social__list--item'}>
 					<a
 						href={`https://drive.google.com/file/d/1BU4iuL-txtj4GdldykoBkFBiAoBt_XuJ/view?usp=sharing`}
 						target={'_blank'}
@@ -70,7 +70,7 @@ const Social = () => {
 							resume
 						</span>
 					</a>
-				</li>
+				</li> */}
 			</ul>
 		</div>
 	);
