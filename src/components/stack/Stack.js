@@ -21,6 +21,8 @@ const Stack = () => {
 							</li>
 							<li className={'stack__list--item'}>Python</li>
 							<li className={'stack__list--item'}>Golang</li>
+							<li className={'stack__list--item'}>Java</li>
+							{/* <li className={'stack__list--item'}>Dart</li> */}
 						</ul>
 					</div>
 					<div className={'stack__grid--item'}>
@@ -37,6 +39,7 @@ const Stack = () => {
 							<li className={'stack__list--item'}>
 								Sass CSS (SCSS)
 							</li>
+							<li className={'stack__list--item'}>Gatsby</li>
 						</ul>
 					</div>
 					<div className={'stack__grid--item'}>
@@ -48,9 +51,13 @@ const Stack = () => {
 								</span>{' '}
 								Back end
 							</li>
-							<li className={'stack__list--item'}>Node.js</li>
-							<li className={'stack__list--item'}>Express</li>
-							<li className={'stack__list--item'}>Flask</li>
+							{/* <li className={'stack__list--item'}>Go | Gin</li> */}
+							<li className={'stack__list--item'}>
+								Node.js | Express
+							</li>
+							<li className={'stack__list--item'}>
+								Python | Flask
+							</li>
 						</ul>
 					</div>
 					<div className={'stack__grid--item'}>
@@ -65,11 +72,11 @@ const Stack = () => {
 							<li className={'stack__list--item'}>
 								Digital Ocean
 							</li>
-							<li className={'stack__list--item'}>
-								AWS Elastic Beanstalk & S3
-							</li>
+							<li className={'stack__list--item'}>Netlify</li>
+							<li className={'stack__list--item'}>Render</li>
 							<li className={'stack__list--item'}>Heroku</li>
-							<li className={'stack__list--item'}>C-panel</li>
+							{/* <li className={'stack__list--item'}>C-panel</li> */}
+							{/* <li className={'stack__list--item'}>AWS</li> */}
 						</ul>
 					</div>
 					<div className={'stack__grid--item'}>
@@ -82,10 +89,11 @@ const Stack = () => {
 								Database
 							</li>
 							<li className={'stack__list--item'}>
-								SQL: Postgres | MySQL| Sqlite
+								SQL: Postgres, MySQL, Sqlite
+								{/* To add Redis */}
 							</li>
 							<li className={'stack__list--item'}>
-								NoSQL: Mongo | Firebase
+								NoSQL: Mongo, Firebase
 							</li>
 						</ul>
 					</div>
@@ -99,17 +107,23 @@ const Stack = () => {
 								Other Tools
 							</li>
 							<li className={'stack__list--item'}>
+								Web Server: Nginx
+							</li>
+							<li className={'stack__list--item'}>
 								Version Control: Git
 							</li>
 							<li className={'stack__list--item'}>
-								Jupyter Notebook
+								Containerization: Docker
 							</li>
 							<li className={'stack__list--item'}>
-								Google Colab
+								Notebook Environment: Jupyter & Google Colab
+							</li>
+							<li className={'stack__list--item'}>
+								Text Editor: VS Code & Vim
 							</li>
 						</ul>
 					</div>
-					<div className={'stack__grid--item'}>
+					{/* <div className={'stack__grid--item'}>
 						<ul>
 							<li className={'stack__list--title'}>
 								<span role='img' aria-label='robot'>
@@ -119,10 +133,10 @@ const Stack = () => {
 								Deep-learning
 							</li>
 							<li className={'stack__list--item'}>Keras</li>
-							{/* <li className={'stack__list--item'}>Tensorflow</li> */}
-							{/* <li className={'stack__list--item'}>Pytoch</li> */}
+							<li className={'stack__list--item'}>Tensorflow</li>
+							<li className={'stack__list--item'}>Pytoch</li>
 						</ul>
-					</div>
+					</div> */}
 				</div>
 
 				{/* Illustration Goes Here */}
