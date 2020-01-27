@@ -16,11 +16,11 @@ const Stack = () => {
 								</span>{' '}
 								General Programming
 							</li>
+							<li className={'stack__list--item'}>Python</li>
+							<li className={'stack__list--item'}>Golang</li>
 							<li className={'stack__list--item'}>
 								JavaScript | TypeSCript
 							</li>
-							<li className={'stack__list--item'}>Python</li>
-							<li className={'stack__list--item'}>Golang</li>
 							<li className={'stack__list--item'}>Java</li>
 							{/* <li className={'stack__list--item'}>Dart</li> */}
 						</ul>
@@ -39,7 +39,7 @@ const Stack = () => {
 							<li className={'stack__list--item'}>
 								Sass CSS (SCSS)
 							</li>
-							<li className={'stack__list--item'}>Gatsby</li>
+							<li className={'stack__list--item'}>Next JS</li>
 						</ul>
 					</div>
 					<div className={'stack__grid--item'}>
@@ -51,12 +51,12 @@ const Stack = () => {
 								</span>{' '}
 								Back end
 							</li>
-							{/* <li className={'stack__list--item'}>Go | Gin</li> */}
-							<li className={'stack__list--item'}>
-								Node.js | Express
-							</li>
 							<li className={'stack__list--item'}>
 								Python | Flask
+							</li>
+							<li className={'stack__list--item'}>Go | Gin</li>
+							<li className={'stack__list--item'}>
+								Node.js | Express
 							</li>
 						</ul>
 					</div>
@@ -70,13 +70,14 @@ const Stack = () => {
 								Deployment & Services{' '}
 							</li>
 							<li className={'stack__list--item'}>
+								AWS Lightsail
+							</li>
+							<li className={'stack__list--item'}>
 								Digital Ocean
 							</li>
 							<li className={'stack__list--item'}>Netlify</li>
-							<li className={'stack__list--item'}>Render</li>
-							<li className={'stack__list--item'}>Heroku</li>
+							{/* <li className={'stack__list--item'}>Heroku</li> */}
 							{/* <li className={'stack__list--item'}>C-panel</li> */}
-							{/* <li className={'stack__list--item'}>AWS</li> */}
 						</ul>
 					</div>
 					<div className={'stack__grid--item'}>
@@ -90,8 +91,8 @@ const Stack = () => {
 							</li>
 							<li className={'stack__list--item'}>
 								SQL: Postgres, MySQL, Sqlite
-								{/* To add Redis */}
 							</li>
+							{/* To add Redis */}
 							<li className={'stack__list--item'}>
 								NoSQL: Mongo, Firebase
 							</li>
