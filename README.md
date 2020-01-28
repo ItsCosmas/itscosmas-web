@@ -1,6 +1,9 @@
 # Personal Portfolio Website
+#### Light Theme
+![A Screenshot of the site Light Theme](https://github.com/ItsCosmas/itscosmas/blob/master/src/assets/img/cozy.png) <br />
 
-![A Screenshot of the site](https://github.com/ItsCosmas/itscosmas/blob/master/src/assets/img/cozy.png) <br />
+#### Dark Theme
+![A Screenshot of the site Dark Theme](https://github.com/ItsCosmas/itscosmas/blob/master/src/assets/img/itscosmas-dark.png) <br />
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/itscosmas?label=Follow%20Me%20&style=social)](https://twitter.com/itsCosmas/)
 
