@@ -21,6 +21,19 @@ const Social = () => {
 				</li>
 				<li className={'social__list--item'}>
 					<a
+						href={`https://gitlab.com/ItsCosmas`}
+						target={'_blank'}
+						className={'social__list--link'}>
+						<svg className={`social__list--icon fill--primary`}>
+							<use xlinkHref={`${icons}#${'icon-gitlab'}`} />
+						</svg>
+						<span className={'u-center-text text-color--secondary'}>
+							gitlab
+						</span>
+					</a>
+				</li>
+				<li className={'social__list--item'}>
+					<a
 						href={`https://linkedin.com/in/cosmasgikunju/`}
 						target={'_blank'}
 						className={'social__list--link'}>
