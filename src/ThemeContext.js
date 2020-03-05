@@ -1,4 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react';
+import { useMedia } from 'use-media';
 
 const ThemeContext = React.createContext({
 	dark: false,
@@ -11,9 +12,20 @@ export function ThemeProvider({ children }) {
 	// keeps state of the current theme
 	const [dark, setDark] = useState(false);
 
+	const prefersDark = useMedia('(prefers-color-scheme: dark)');
+
 	// paints the app before it renders elements
 	useLayoutEffect(() => {
 		const lastTheme = window.localStorage.getItem('darkTheme');
+
+		// Media Hook to check if user prefers dark mode hence load dark mode
+		if (prefersDark) {
+			setDark(true);
+			applyTheme(darkTheme);
+		} else {
+			setDark(false);
+			applyTheme(lightTheme);
+		}
 
 		if (lastTheme === 'true') {
 			setDark(true);
@@ -23,7 +35,7 @@ export function ThemeProvider({ children }) {
 			applyTheme(lightTheme);
 		}
 		// if state changes, repaints the app
-	}, [dark]);
+	}, [dark, prefersDark]);
 
 	// rewrites set of css variablels/colors
 	const applyTheme = (theme) => {
