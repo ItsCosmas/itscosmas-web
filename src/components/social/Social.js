@@ -10,6 +10,7 @@ const Social = () => {
 					<a
 						href={`https://github.com/ItsCosmas`}
 						target={'_blank'}
+						rel='noopener noreferrer'
 						className={'social__list--link'}>
 						<svg className={`social__list--icon fill--primary`}>
 							<use xlinkHref={`${icons}#${'icon-github'}`} />
@@ -23,6 +24,7 @@ const Social = () => {
 					<a
 						href={`https://gitlab.com/ItsCosmas`}
 						target={'_blank'}
+						rel='noopener noreferrer'
 						className={'social__list--link'}>
 						<svg className={`social__list--icon fill--primary`}>
 							<use xlinkHref={`${icons}#${'icon-gitlab'}`} />
@@ -36,6 +38,7 @@ const Social = () => {
 					<a
 						href={`https://linkedin.com/in/cosmasgikunju/`}
 						target={'_blank'}
+						rel='noopener noreferrer'
 						className={'social__list--link'}>
 						<svg className={`social__list--icon fill--primary`}>
 							<use xlinkHref={`${icons}#${'icon-linkedin'}`} />
@@ -49,6 +52,7 @@ const Social = () => {
 					<a
 						href={`https://dev.to/itscosmas`}
 						target={'_blank'}
+						rel='noopener noreferrer'
 						className={'social__list--link'}>
 						<svg className={`social__list--icon fill--primary`}>
 							<use xlinkHref={`${icons}#${'icon-dev-dot-to'}`} />
@@ -62,6 +66,7 @@ const Social = () => {
 					<a
 						href={`https://medium.com/@gikunjucosmas`}
 						target={'_blank'}
+						rel='noopener noreferrer'
 						className={'social__list--link'}>
 						<svg className={`social__list--icon fill--primary`}>
 							<use xlinkHref={`${icons}#${'icon-medium'}`} />
@@ -75,6 +80,7 @@ const Social = () => {
 					<a
 						href={`https://drive.google.com/file/d/1BU4iuL-txtj4GdldykoBkFBiAoBt_XuJ/view?usp=sharing`}
 						target={'_blank'}
+						rel='noopener noreferrer'
 						className={'social__list--link'}>
 						<svg className={`social__list--icon fill--primary`}>
 							<use xlinkHref={`${icons}#${'icon-newspaper'}`} />
