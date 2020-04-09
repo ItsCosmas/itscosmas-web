@@ -1,9 +1,9 @@
 import React, { useState, useLayoutEffect } from 'react';
-import { useMedia } from 'use-media';
+import { useMediaLayout } from 'use-media';
 
 const ThemeContext = React.createContext({
 	dark: false,
-	toggle: () => {}
+	toggle: () => {},
 });
 
 export default ThemeContext;
@@ -12,30 +12,47 @@ export function ThemeProvider({ children }) {
 	// keeps state of the current theme
 	const [dark, setDark] = useState(false);
 
-	const prefersDark = useMedia('(prefers-color-scheme: dark)');
+	const prefersDark = useMediaLayout('(prefers-color-scheme: dark)');
+	const prefersLight = useMediaLayout('(prefers-color-scheme: light)');
+	const prefersNotSet = useMediaLayout(
+		'(prefers-color-scheme: no-preference)'
+	);
 
 	// paints the app before it renders elements
 	useLayoutEffect(() => {
 		const lastTheme = window.localStorage.getItem('darkTheme');
 
-		// Media Hook to check if user prefers dark mode hence load dark mode
+		// Media Hook to check what theme user prefers
 		if (prefersDark) {
+			console.log('User Prefers dark theme');
 			setDark(true);
 			applyTheme(darkTheme);
-		} else {
+		}
+
+		if (prefersLight) {
+			console.log('User Prefers light theme');
 			setDark(false);
 			applyTheme(lightTheme);
 		}
 
+		if (prefersNotSet) {
+			console.log('User Preference theme not set');
+
+			setDark(true);
+			applyTheme(darkTheme);
+		}
+
 		if (lastTheme === 'true') {
+			console.log('User Previous theme was dark');
 			setDark(true);
 			applyTheme(darkTheme);
 		} else {
+			console.log('User Previous theme was not set so we show light');
 			setDark(false);
 			applyTheme(lightTheme);
 		}
 		// if state changes, repaints the app
-	}, [dark, prefersDark]);
+	}, [dark]);
 
 	// rewrites set of css variablels/colors
 	const applyTheme = (theme) => {
@@ -55,7 +72,7 @@ export function ThemeProvider({ children }) {
 		<ThemeContext.Provider
 			value={{
 				dark,
-				toggle
+				toggle,
 			}}>
 			{children}
 		</ThemeContext.Provider>
@@ -69,7 +86,7 @@ const lightTheme = [
 	'--text-color-secondary: var(--color-prussianBlue)',
 	'--text-color-tertiary:var(--color-azureRadiance)',
 	'--fill-switch: var(--color-prussianBlue)',
-	'--fill-primary:var(--color-prussianBlue)'
+	'--fill-primary:var(--color-prussianBlue)',
 ];
 
 const darkTheme = [
@@ -78,5 +95,5 @@ const darkTheme = [
 	'--text-color-secondary: var(--color-iron)',
 	'--text-color-tertiary: var(--color-white)',
 	'--fill-switch: var(--color-gold)',
-	'--fill-primary:var(--color-white)'
+	'--fill-primary:var(--color-white)',
 ];
