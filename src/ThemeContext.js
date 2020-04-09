@@ -8,6 +8,9 @@ const ThemeContext = React.createContext({
 export default ThemeContext;
 
 export function ThemeProvider({ children }) {
+	// Keep state of the user toggle
+	const [userToggle, setUserToggle] = useState(false);
+
 	// keeps state of the current theme
 	const [dark, setDark] = useState(false);
 
@@ -21,17 +24,20 @@ export function ThemeProvider({ children }) {
 
 	// paints the app before it renders elements
 	useLayoutEffect(() => {
-		// Media Hook to check what theme user prefers
-		if (prefersDark) {
-			setDark(true);
-		}
+		// This will stop the system preferences being applied if the user manually toggles theme
+		if (!userToggle) {
+			// Media Hook to check what theme user prefers
+			if (prefersDark) {
+				setDark(true);
+			}
 
-		if (prefersLight) {
-			setDark(false);
-		}
+			if (prefersLight) {
+				setDark(false);
+			}
 
-		if (prefersNotSet) {
-			setDark(true);
+			if (prefersNotSet) {
+				setDark(true);
+			}
 		}
 
 		applyTheme();
@@ -55,12 +61,11 @@ export function ThemeProvider({ children }) {
 	};
 
 	const toggle = () => {
-		console.log('Toggle Method Called');
-
 		// A smooth transition on theme switch
 		const body = document.getElementsByTagName('body')[0];
 		body.style.cssText = 'transition: background .5s ease';
 
+		setUserToggle(true);
 		setDark(!dark);
 	};
 
