@@ -8,41 +8,23 @@ const ThemeContext = React.createContext({
 export default ThemeContext;
 
 export function ThemeProvider({ children }) {
-	// Keep state of the user toggle
-	const [userToggle, setUserToggle] = useState(false);
-
-	// keeps state of the current theme
-	const [dark, setDark] = useState(false);
+	// See https://stackoverflow.com/a/61119008/7744772 for more
+	// Check whether user prefers dark theme in system
+	/* Because you are setting the initial theme to non-dark, 
+    you can assume that your initial state should be dark only 
+	when the user's preference is set to dark. */
 
 	const prefersDark = window.matchMedia('(prefers-color-scheme: dark)')
 		.matches;
-	const prefersLight = window.matchMedia('(prefers-color-scheme: light)')
-		.matches;
-	const prefersNotSet = window.matchMedia(
-		'(prefers-color-scheme: no-preference)'
-	).matches;
 
-	// paints the app before it renders elements
+	// keeps state of the current theme
+	const [dark, setDark] = useState(prefersDark);
+
+	// Apply theme before it renders elements
 	useLayoutEffect(() => {
-		// This will stop the system preferences being applied if the user manually toggles theme
-		if (!userToggle) {
-			// Media Hook to check what theme user prefers
-			if (prefersDark) {
-				setDark(true);
-			}
-
-			if (prefersLight) {
-				setDark(false);
-			}
-
-			if (prefersNotSet) {
-				setDark(true);
-			}
-		}
-
+		/* You end up here only when the user takes action 
+        to change the theme, hence you can just apply the new theme. */
 		applyTheme();
-
-		// if state changes, repaints the app
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [dark]);
 
@@ -55,7 +37,6 @@ export function ThemeProvider({ children }) {
 		if (!dark) {
 			theme = lightTheme;
 		}
-
 		const root = document.getElementsByTagName('html')[0];
 		root.style.cssText = theme.join(';');
 	};
@@ -65,7 +46,6 @@ export function ThemeProvider({ children }) {
 		const body = document.getElementsByTagName('body')[0];
 		body.style.cssText = 'transition: background .5s ease';
 
-		setUserToggle(true);
 		setDark(!dark);
 	};
 
