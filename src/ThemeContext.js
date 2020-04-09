@@ -2,7 +2,7 @@ import React, { useState, useLayoutEffect } from 'react';
 
 const ThemeContext = React.createContext({
 	dark: false,
-	toggle: () => {}
+	toggle: () => {},
 });
 
 export default ThemeContext;
@@ -24,29 +24,40 @@ export function ThemeProvider({ children }) {
 		// Media Hook to check what theme user prefers
 		if (prefersDark) {
 			setDark(true);
-			applyTheme(darkTheme);
 		}
 
 		if (prefersLight) {
 			setDark(false);
-			applyTheme(lightTheme);
 		}
 
 		if (prefersNotSet) {
 			setDark(true);
-			applyTheme(darkTheme);
 		}
+
+		applyTheme();
+
 		// if state changes, repaints the app
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [dark]);
 
 	// rewrites set of css variablels/colors
-	const applyTheme = (theme) => {
+	const applyTheme = () => {
+		let theme;
+		if (dark) {
+			theme = darkTheme;
+		}
+		if (!dark) {
+			theme = lightTheme;
+		}
+
 		const root = document.getElementsByTagName('html')[0];
 		root.style.cssText = theme.join(';');
 	};
 
 	const toggle = () => {
+		console.log('Toggle Method Called');
+
+		// A smooth transition on theme switch
 		const body = document.getElementsByTagName('body')[0];
 		body.style.cssText = 'transition: background .5s ease';
 
@@ -57,7 +68,7 @@ export function ThemeProvider({ children }) {
 		<ThemeContext.Provider
 			value={{
 				dark,
-				toggle
+				toggle,
 			}}>
 			{children}
 		</ThemeContext.Provider>
@@ -71,7 +82,7 @@ const lightTheme = [
 	'--text-color-secondary: var(--color-prussianBlue)',
 	'--text-color-tertiary:var(--color-azureRadiance)',
 	'--fill-switch: var(--color-prussianBlue)',
-	'--fill-primary:var(--color-prussianBlue)'
+	'--fill-primary:var(--color-prussianBlue)',
 ];
 
 const darkTheme = [
@@ -80,5 +91,5 @@ const darkTheme = [
 	'--text-color-secondary: var(--color-iron)',
 	'--text-color-tertiary: var(--color-white)',
 	'--fill-switch: var(--color-gold)',
-	'--fill-primary:var(--color-white)'
+	'--fill-primary:var(--color-white)',
 ];
