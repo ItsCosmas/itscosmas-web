@@ -1,8 +1,11 @@
 # Personal Portfolio Website
+
 #### Light Theme
+
 ![A Screenshot of the site Light Theme](https://github.com/ItsCosmas/itscosmas/blob/master/src/assets/img/cozy.png) <br />
 
 #### Dark Theme
+
 ![A Screenshot of the site Dark Theme](https://github.com/ItsCosmas/itscosmas/blob/master/src/assets/img/itscosmas-dark.png) <br />
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/itscosmas?label=Follow%20Me%20&style=social)](https://twitter.com/itsCosmas/)
@@ -47,6 +50,18 @@ $ npm install
 ### Configure your private Firestore Credentials
 
 -   Save app credentials to a private `.env` file, get yours here : https://firebase.google.com/
+-   Sample `.env` file:
+
+```
+REACT_APP_API_KEY=
+REACT_APP_AUTH_DOMAIN=
+REACT_APP_DB_URL=
+REACT_APP_P_ID=
+REACT_APP_SB=
+REACT_APP_MS_ID=
+REACT_APP_APP_ID=
+```
+
 -   Learn about `.env` files and react here : https://create-react-app.dev/docs/adding-custom-environment-variables/
 -   Find a tutorial for React and Firestore here: https://sebhastian.com/react-firestore
 
