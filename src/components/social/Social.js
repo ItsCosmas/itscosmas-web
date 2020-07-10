@@ -64,7 +64,7 @@ const Social = () => {
 				</li>
 				<li className={'social__list--item'}>
 					<a
-						href={`https://medium.com/@gikunjucosmas`}
+						href={`https://medium.com/@itscosmas`}
 						target={'_blank'}
 						rel='noopener noreferrer'
 						className={'social__list--link'}>
