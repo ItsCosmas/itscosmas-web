@@ -13,9 +13,9 @@
 ![Netlify](https://img.shields.io/netlify/7caf2c76-ee2c-4dc0-a183-4720462ad346)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7caf2c76-ee2c-4dc0-a183-4720462ad346/deploy-status)](https://app.netlify.com/sites/itscosmas/deploys)
 
-![GitHub language count](https://img.shields.io/github/languages/count/itscosmas/itscosmas)
-![GitHub top language](https://img.shields.io/github/languages/top/itscosmas/itscosmas)
-![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/itscosmas/itscosmas/react)
+![GitHub language count](https://img.shields.io/github/languages/count/itscosmas/itscosmas-web)
+![GitHub top language](https://img.shields.io/github/languages/top/itscosmas/itscosmas-web)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/itscosmas/itscosmas-web/react)
 
 This is my personal portfolio website available at https://itscosmas.me/ . Its written in ES6 Javascript and CSS preprocessor Sass :
 
