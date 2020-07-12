@@ -21,7 +21,6 @@ const Stack = () => {
 							<li className={'stack__list--item'}>
 								JavaScript | TypeSCript
 							</li>
-							<li className={'stack__list--item'}>Java</li>
 							{/* <li className={'stack__list--item'}>Dart</li> */}
 						</ul>
 					</div>
@@ -37,7 +36,7 @@ const Stack = () => {
 							<li className={'stack__list--item'}>React JS</li>
 							<li className={'stack__list--item'}>Redux</li>
 							<li className={'stack__list--item'}>
-								Sass CSS (SCSS)
+								CSS and Sass (SCSS)
 							</li>
 							<li className={'stack__list--item'}>Next JS</li>
 						</ul>
@@ -51,13 +50,9 @@ const Stack = () => {
 								</span>{' '}
 								Back end
 							</li>
-							<li className={'stack__list--item'}>
-								Python | Flask
-							</li>
-							<li className={'stack__list--item'}>Go | Gin</li>
-							<li className={'stack__list--item'}>
-								Node.js | Express
-							</li>
+							<li className={'stack__list--item'}>Python</li>
+							<li className={'stack__list--item'}>Golang</li>
+							<li className={'stack__list--item'}>Node.js</li>
 						</ul>
 					</div>
 					<div className={'stack__grid--item'}>
@@ -69,9 +64,7 @@ const Stack = () => {
 								</span>{' '}
 								Deployment & Services{' '}
 							</li>
-							<li className={'stack__list--item'}>
-								AWS Lightsail
-							</li>
+							<li className={'stack__list--item'}>AWS</li>
 							<li className={'stack__list--item'}>
 								Digital Ocean
 							</li>
@@ -108,7 +101,7 @@ const Stack = () => {
 								Other Tools
 							</li>
 							<li className={'stack__list--item'}>
-								Web Server: Nginx
+								Web Server: Nginx & Caddy Server
 							</li>
 							<li className={'stack__list--item'}>
 								Version Control: Git
